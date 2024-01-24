@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE paneles [
+    <!ELEMENT paneles (evento+)>
+    <!ELEMENT evento (via, pk, retencion, sentido?, carrilescortados?)>
+    <!ATTLIST evento
+        tipo CDATA #REQUIRED
+        fecha CDATA #IMPLIED
+    >
+    <!ELEMENT via (nombre, ref, origen, destino, (doble|sentido), carriles)>
+    <!ELEMENT doble EMPTY>
+    <!ELEMENT sentido (#PCDATA)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT ref (#PCDATA)>
+    <!ELEMENT origen (#PCDATA)>
+    <!ELEMENT destino (#PCDATA)>
+    <!ELEMENT carriles (#PCDATA)>
+    <!ELEMENT retencion EMPTY>
+    <!ATTLIST retencion
+        long CDATA #REQUIRED
+    >
+    <!ELEMENT carrilescortados EMPTY>
+    <!ATTLIST carrilescortados
+        valor (1|2|3|4) #REQUIRED
+    >
+    <!ELEMENT pk (#PCDATA)>
+]>
+
+<paneles>
+    <evento tipo="incidencia" fecha="2024-01-24">
+        <via>
+            <nombre>Autopista A1</nombre>
+            <ref>A1</ref>
+            <origen>Ciudad A</origen>
+            <destino>Ciudad B</destino>
+            <doble/>
+            <carriles>4</carriles>
+        </via>
+        <pk>120</pk>
+        <retencion long="10"/>
+        <sentido>Norte</sentido>
+        <carrilescortados valor="2"/>
+    </evento>
+
+    <evento tipo="obras">
+        <via>
+            <nombre>Autopista A2</nombre>
+            <ref>A2</ref>
+            <origen>Ciudad X</origen>
+            <destino>Ciudad Y</destino>
+            <doble/>
+            <carriles>3</carriles>
+        </via>
+        <pk>75</pk>
+        <retencion long="5"/>
+    </evento>
+</paneles>
