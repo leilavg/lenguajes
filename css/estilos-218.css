@@ -1,0 +1,42 @@
+/* Estilos generales para la tabla */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Estilos para las celdas de la tabla */
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos para el estado normal de los enlaces */
+td[class^="color-"] {
+    color: red; /* Color rojo */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Estilos para el estado al pasar el cursor por los enlaces */
+td[class^="color-"]:hover {
+    color: white; /* Color blanco */
+    background-color: red; /* Fondo rojo */
+    text-decoration: underline; /* Subrayado */
+}
+
+/* Estilos para el estado activo de los enlaces */
+td[class^="color-"]:active {
+    color: orange; /* Color naranja */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Estilos para el estado visitado de los enlaces */
+td[class^="color-"]:visited {
+    color: darkgreen; /* Color verde oscuro */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Estilos para el estado con el foco del teclado de los enlaces */
+td[class^="color-"]:focus {
+    color: blue; /* Color azul */
+    font-weight: bold; /* Negrita */
+}
